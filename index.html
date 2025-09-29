@@ -3,12 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
+  <title>My Awesome Blog</title>
   <link href='/style.css' rel='stylesheet'>
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
+  <blog-menu></blog-menu>
+
+  <header>
+    <h1>My Awesome Blog</h1>
+  </header>
+
+  <main>
+    <h2>A Beautiful Scene</h2>
+    <img src="https://picsum.photos/800/400" alt="A random placeholder image">
+
+    <div class="post-actions">
+      <textarea placeholder="Write your thoughts here..."></textarea>
+      <div class="link-adder">
+        <input type="url" placeholder="https://example.com">
+        <button>Add Link</button>
+      </div>
+    </div>
+  </main>
+
   <script defer type="text/javascript" src="/main.js"></script>
 </body>
 </html>
