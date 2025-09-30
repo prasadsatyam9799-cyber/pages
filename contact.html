@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Weathering Online</title>
-    <meta name="description" content="Your source for weather information.">
+    <title>Contact Us - Weathering Online</title>
+    <meta name="description" content="Contact Weathering Online for more information.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,10 +19,17 @@
       </div>
     </div>
     <header>
-        <h1>Welcome to Weathering Online</h1>
+        <h1>Contact Us</h1>
     </header>
     <main>
-        <p>Your one-stop destination for accurate and up-to-date weather forecasts. We provide detailed weather information to help you plan your day.</p>
+        <p>For any inquiries, please email us at <a href="mailto:info@weathering.online">info@weathering.online</a>.</p>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message"></textarea><br><br>
+            <input type="submit" value="Send">
+        </form>
     </main>
     <script src="main.js"></script>
 </body>
