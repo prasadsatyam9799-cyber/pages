@@ -1,38 +1,48 @@
+
 # Project Blueprint
 
 ## Overview
 
-This project is a simple, framework-less web application for providing weather information. It consists of several HTML pages, a CSS stylesheet, and JavaScript for interactivity.
+This project is a simple website with a "Free Fire Team Challenge" tap game. The main goal is to create an interactive and engaging experience for users, encouraging teamwork to unlock a collective reward.
 
-## Project Structure
+## Current State
 
-*   `index.html`: The main landing page.
-*   `about.html`: A page describing the project's mission.
-*   `contact.html`: A page with contact information and a form.
-*   `privacy.html`: The privacy policy page.
-*   `terms.html`: The terms of service page.
-*   `sports.html`: A page for sports news.
-*   `health.html`: A guide to health and fitness.
-*   `style.css`: The main stylesheet for the application.
-*   `main.js`: The main JavaScript file for general interactivity.
-*   `search.js`: JavaScript for the search functionality.
-*   `health.js`: JavaScript for the health and fitness page.
+The project currently consists of a basic website structure with a few static pages.
 
-## Style and Design
+## Plan for "Free Fire Team Challenge"
 
-The application uses a simple and clean design. The layout is responsive and adapts to different screen sizes. The color scheme is based on a dark gray for the header and buttons, with a white background for the content. The font is Arial, with Material Icons used for iconography.
+### 1. Create the Game Page (`tap-game.html`)
 
-## Features
+-   **HTML:**
+    -   Create the main structure with a container for the game.
+    -   Add a heading "Free Fire Team Challenge – 150,000 Taps" and a sub-heading.
+    -   Create a large, clickable circle for tapping.
+    -   Add a progress bar and a text element to display the current tap count.
+    -   Create a section to display the locked/unlocked redeem code.
+    -   Add social media sharing buttons (WhatsApp and Facebook).
+-   **CSS (`tap-game.css`):**
+    -   Style the page with a visually appealing and responsive layout.
+    -   Design a colorful and interactive tap circle.
+    -   Style the progress bar to reflect the current progress.
+    -   Ensure the design is mobile-friendly.
+-   **JavaScript (`tap-game.js`):**
+    -   Integrate the Firebase SDK.
+    -   Initialize a Firestore database connection.
+    -   Implement a function to increment a `total` field in a `tapCounter` document within a `game` collection in Firestore.
+    -   Use `onSnapshot` to listen for real-time updates to the tap count and update the UI accordingly.
+    -   Implement logic to fetch and display a redeem code from Firestore once the tap count reaches 150,000.
+    -   Add event listeners for the tap circle and social media share buttons.
 
-*   **Navigation:** A dropdown menu provides navigation to all pages.
-*   **Search:** A search bar allows users to search for content within the site.
-*   **Responsive Design:** The layout is optimized for both desktop and mobile devices.
+### 2. Update Navigation
 
-## Current Task: Accessibility and User-Friendliness Improvements
+-   Add a link to the "Team Tap Challenge" in the main navigation menu of the website (`index.html`).
 
-I have made the following changes to improve the accessibility and user-friendliness of the website:
+### 3. Firebase Setup
 
-*   **ARIA Labels:** Added `aria-label` attributes to the navigation menu button and the home icon to provide context for screen readers.
-*   **Search Bar Label:** Added a `label` for the search input and visually hid it to improve accessibility without altering the visual design.
-*   **Dropdown Icon:** Changed the dropdown icon to a more universally recognized "hamburger" icon (&#9776;).
-*   **Consistent Improvements:** Applied these changes consistently across all HTML files.
+-   The Firestore database will have the following structure:
+    -   Collection: `game`
+    -   Document: `tapCounter`
+    -   Field: `total` (Number)
+    -   Document: `reward`
+    -   Field: `redeemCode` (String)
+

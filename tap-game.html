@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Fire Team Challenge</title>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-506933386"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-506933386');
+    </script>
+    <style>
+        body{font-family:sans-serif;background-color:#f0f2f5;color:#333;margin:0;display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:100vh;padding:10px}.container{text-align:center;background-color:#fff;padding:20px;border-radius:10px;box-shadow:0 0 20px rgba(0,0,0,.1);width:90%;max-width:400px;margin-bottom:20px}h1{font-size:1.5rem;color:#ff4500}.subtitle{color:#666}.progress-container{margin:20px 0}.progress-bar-circular{width:150px;height:150px;border-radius:50%;display:flex;justify-content:center;align-items:center;margin:0 auto;background:conic-gradient(#4caf50 0%,#ddd 0%);transition:background .5s}.progress-value{font-size:1.5rem;font-weight:700}.tap-circle{width:120px;height:120px;border-radius:50%;background-color:#ff4500;color:#fff;font-size:1.2rem;border:none;cursor:pointer;transition:transform .1s}.tap-circle:active{transform:scale(.95)}.tap-circle:disabled{background-color:#ccc;cursor:not-allowed}.counter-container{margin:20px 0;font-size:1.1rem}.prize-section{background-color:#eee;padding:15px;border-radius:5px;margin-top:20px}#final-prize-message,#final-prize{opacity:0;transition:opacity 1s ease-in-out}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Free Fire Team Challenge – 350,000 Taps</h1>
+        <p class="subtitle">Tap the circle to help unlock the final prize!</p>
+
+        <div class="progress-container">
+            <div class="progress-bar-circular" role="progressbar" aria-valuemin="0" aria-valuemax="350000" aria-valuenow="0">
+                <span class="progress-value">Loading...</span>
+            </div>
+        </div>
+
+        <button id="tap-circle" class="tap-circle" aria-label="Tap to increase the count">
+            <span id="tap-text">Tap Me!</span>
+        </button>
+
+        <div class="counter-container">
+            <p>Total Taps: <span id="tap-count" aria-live="polite" aria-atomic="true">Loading...</span></p>
+        </div>
+
+        <div class="prize-section">
+            <p id="final-prize-message" style="display: none;">Congratulations! The final prize will be revealed in <span id="countdown-timer">10:00</span> minutes!</p>
+            <p id="final-prize" style="display: none;">The final prize is: <span id="prize-code"></span></p>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script>
+      const firebaseConfig = {
+          apiKey: "YOUR_API_KEY",
+          authDomain: "YOUR_AUTH_DOMAIN",
+          projectId: "YOUR_PROJECT_ID",
+          storageBucket: "YOUR_STORAGE_BUCKET",
+          messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+          appId: "YOUR_APP_ID"
+      };
+
+      try {
+          firebase.initializeApp(firebaseConfig);
+      } catch (e) {
+          console.error("Firebase initialization failed:", e);
+          alert("This application is not configured correctly.");
+      }
+
+      const db = firebase.firestore();
+      const tapCircle = document.getElementById('tap-circle');
+      const tapText = document.getElementById('tap-text');
+      const tapCountElement = document.getElementById('tap-count');
+      const finalPrizeMessage = document.getElementById('final-prize-message');
+      const finalPrize = document.getElementById('final-prize');
+      const prizeCodeElement = document.getElementById('prize-code');
+      const countdownTimerElement = document.getElementById('countdown-timer');
+      const progressValue = document.querySelector('.progress-value');
+      const progressBar = document.querySelector('.progress-bar-circular');
+
+      const finalMilestone = 350000;
+      const countdownDuration = 10 * 60 * 1000; // 10 minutes
+      let isMilestoneHandled = false;
+
+      tapCircle.addEventListener('click', () => {
+          gtag('event', 'tap', { 'event_category': 'Game', 'event_label': 'Tap Circle' });
+          addTap();
+      });
+
+      function addTap() {
+          if (!db) return;
+          const tapCounterRef = db.collection('game').doc('tapCounter');
+          tapCounterRef.update({ total: firebase.firestore.FieldValue.increment(1) })
+              .catch(error => {
+                  if (error.code === 'not-found') {
+                      tapCounterRef.set({ total: 193300 });
+                  }
+              });
+      }
+
+      db.collection('game').doc('tapCounter').onSnapshot(doc => {
+          let currentTaps = 193300;
+          let milestoneTimestamp = null;
+
+          if (doc.exists) {
+              const data = doc.data();
+              currentTaps = data.total || currentTaps;
+              milestoneTimestamp = data.milestoneReachedTimestamp || null;
+          }
+          
+          updateUI(currentTaps);
+
+          if (currentTaps >= finalMilestone && !isMilestoneHandled) {
+              handleFinalMilestone(doc, milestoneTimestamp);
+          }
+      }, error => {
+          console.error("Error getting tap counter:", error);
+          updateUI(193300);
+      });
+
+      function handleFinalMilestone(doc, timestamp) {
+          isMilestoneHandled = true;
+          tapCircle.disabled = true;
+          tapText.textContent = "Goal Reached!";
+
+          if (!timestamp) {
+              doc.ref.update({ milestoneReachedTimestamp: firebase.firestore.FieldValue.serverTimestamp() });
+              gtag('event', 'final_prize_countdown_started', { 'event_category': 'Game' });
+              return; // The next snapshot will handle the countdown
+          }
+
+          finalPrizeMessage.style.display = 'block';
+          finalPrizeMessage.style.opacity = 1;
+
+          const timeNow = Date.now();
+          const timeRemaining = timestamp.toMillis() + countdownDuration - timeNow;
+
+          if (timeRemaining <= 0) {
+              revealFinalPrize();
+          } else {
+              startCountdown(timeRemaining);
+              setTimeout(revealFinalPrize, timeRemaining);
+          }
+      }
+      
+      function startCountdown(remaining) {
+        let timer = remaining;
+        const interval = setInterval(() => {
+            const minutes = Math.floor((timer % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timer % (1000 * 60)) / 1000);
+            countdownTimerElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            timer -= 1000;
+            if (timer < 0) {
+                clearInterval(interval);
+            }
+        }, 1000);
+      }
+
+      function revealFinalPrize() {
+          db.collection('game').doc('finalPrize').get().then(doc => {
+              if (doc.exists) {
+                  prizeCodeElement.textContent = doc.data().code || "PRIZE-NOT-FOUND";
+              } else {
+                  prizeCodeElement.textContent = "No prize configured.";
+              }
+              finalPrizeMessage.style.display = 'none';
+              finalPrize.style.display = 'block';
+              finalPrize.style.opacity = 1;
+              gtag('event', 'final_prize_revealed', { 'event_category': 'Game' });
+          }).catch(err => {
+              console.error("Error fetching prize:", err);
+              prizeCodeElement.textContent = "Error fetching prize.";
+          });
+      }
+
+      function updateUI(currentTaps) {
+          const percentage = Math.min((currentTaps / finalMilestone) * 100, 100);
+          tapCountElement.textContent = `${currentTaps.toLocaleString()} / ${finalMilestone.toLocaleString()}`;
+          progressValue.textContent = `${Math.floor(percentage)}%`;
+          progressBar.style.background = `conic-gradient(#4caf50 ${percentage}%, #ddd 0%)`;
+          progressBar.setAttribute('aria-valuenow', currentTaps);
+          if (currentTaps >= finalMilestone) {
+              tapCircle.disabled = true;
+              tapText.textContent = "Goal Reached!";
+          }
+      }
+    </script>
+</body>
+</html>
