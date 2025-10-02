@@ -1,51 +1,60 @@
 
-# Tap Game Application Blueprint
+# Project Blueprint
 
-## 1. Overview
+## Overview
 
-**Purpose:** A real-time, collaborative "tap-to-win" game designed to drive community engagement. Players tap a central button to collectively reach a target number of taps, unlocking a grand prize after a time-delayed reveal.
+This project is a simple website with a main page, several content pages, and a tap-based game. The website uses a client-side search functionality to search through its pages. The tap game is a collaborative game where users tap a circle to increase a counter. The game uses Firebase to store the total tap count and the final prize.
 
-**Core Features:**
-- Real-time global tap counter synchronized with Firebase Firestore.
-- A single grand prize milestone at 350,000 taps.
-- A 10-minute delayed prize reveal to build anticipation.
-- A "Share to Continue" gate to encourage organic growth.
-- Google Analytics (GA4) integration for event tracking.
+## File Structure
 
-## 2. Implemented Design & Features (v2)
+- `index.html`: The main entry point of the website.
+- `style.css`: The main stylesheet for the website.
+- `main.js`: The main JavaScript file for the website, containing the logic for the dropdown menu and the sticky navbar.
+- `search.js`: The JavaScript file for the client-side search functionality.
+- `sitemap.xml`: The sitemap for the website.
+- `robots.txt`: The robots.txt file for the website.
+- `about.html`: The about page.
+- `contact.html`: The contact page.
+- `privacy.html`: The privacy policy page.
+- `terms.html`: The terms of service page.
+- `sports.html`: The sports page.
+- `health.html`: The health page.
+- `tap-game.html`: The HTML file for the tap game.
+- `tap-game.css`: The CSS file for the tap game.
+- `src/tap-game.js`: The main JavaScript file for the tap game.
+- `src/components/game-container.js`: The web component for the game container.
+- `src/components/progress-display.js`: The web component for the progress display.
+- `src/components/tap-circle.js`: The web component for the tap circle.
+- `src/components/prize-display.js`: The web component for the prize display.
+- `src/components/share-modal.js`: The web component for the share modal.
 
-This section documents the current state of the application after the latest overhaul.
+## Features
 
-### Architecture:
-- **Frontend:** HTML, CSS, and modern JavaScript.
-- **UI Components:** Refactored into standards-based Web Components (Custom Elements with Shadow DOM) for better encapsulation and maintainability. Key components include `<game-container>`, `<progress-display>`, `<tap-circle>`, and `<prize-display>`.
-- **Backend:** Firebase Firestore for real-time database capabilities.
-- **Analytics:** Firebase Analytics integrated with GA4.
+- **Client-side search:** The website uses a client-side search functionality to search through its pages.
+- **Tap game:** The website has a tap game where users can tap a circle to increase a counter.
+- **Firebase integration:** The tap game uses Firebase to store the total tap count and the final prize.
+- **Web Components:** The tap game is built using Web Components.
+- **Modern UI/UX:** The application has a modern, user-friendly and responsive design.
+- **Sticky Navbar:** The navbar stays fixed at the top of the page when the user scrolls.
 
-### Visual Design:
-- **Layout:** A clean, centered, "lifted" card-based layout on a textured background.
-- **Color Palette:** A vibrant and energetic theme with a prominent call-to-action color (`#ff4500`) and deeper, richer background tones.
-- **Typography:** Expressive, sans-serif fonts with a strong visual hierarchy to guide the user.
-- **Texture & Depth:** A subtle noise texture on the main background gives a premium, tactile feel. Multi-layered drop shadows create a strong sense of depth, making the main container appear to float.
-- **Interactivity:** The tap circle has a "glow" effect and provides tactile feedback. The progress bar is a smooth, circular indicator.
-- **Animations:** Subtle, refined animations for modal popups and prize reveals.
+## Implemented Plan
 
-## 3. Current Plan: UI & Structural Overhaul (v2)
+- Analyzed the project to find and fix any errors or bugs.
+- Examined the `index.html` file to understand the basic structure of the application.
+- Examined the `main.js` file to understand the JavaScript functionality associated with the main page.
+- Examined the `search.js` file and improved the search functionality by using the `sitemap.xml` to get the list of pages to search.
+- Created a `sitemap.xml` file that will help search engines to better crawl the application.
+- Created a `robots.txt` to improve SEO.
+- Examined the `tap-game.html` file to understand the structure of the tap game.
+- Examined the `src/tap-game.js` file and found a critical issue with the Firebase configuration.
+- Examined the web components used in the tap game.
+- **User-Friendliness Improvements:**
+  - Redesigned the main stylesheet (`style.css`) for a more modern and visually appealing look.
+  - Updated the `index.html` to reflect the new design, including a new navigation bar, a hero section and a featured articles section.
+  - Updated the `main.js` to work with the new dropdown menu and to add a sticky navbar.
+  - Updated the `tap-game.html` to be consistent with the new design.
+  - Updated the `tap-game.css` to match the new design.
 
-**Objective:** Refactor the application to use a modern Web Component architecture and implement a more sophisticated, "bold" visual design in line with the project's core development guidelines.
+## Current Plan
 
-**Actionable Steps:**
-
-1.  **Refactor to Web Components:** Convert all major UI sections (`container`, `progress-bar`, `tap-circle`, `prize-section`) into self-contained Custom Elements.
-    -   `game-container.js`: The main application wrapper.
-    -   `progress-display.js`: The circular progress bar and counter.
-    -   `tap-circle.js`: The primary interactive button.
-    -   `prize-display.js`: The section for revealing the final prize.
-    -   `share-modal.js`: The popup for the sharing gate.
-2.  **Implement Bold Visual Redesign:** Update `style.css` to introduce a more premium aesthetic.
-    -   Add a full-screen background with a subtle noise texture.
-    -   Redesign the main container as a "lifted" card with deep, multi-layered drop shadows.
-    -   Enhance the tap circle with a "glow" effect.
-    -   Refine the color palette and typography for a more polished look.
-3.  **Update Main Logic:** Modify `tap-game.js` to manage the state and orchestrate the new Web Components. The core Firebase logic will remain but will now pass data into the components via properties and attributes.
-4.  **Update HTML:** Streamline `tap-game.html` to be a clean shell that loads the necessary modules and uses the new custom element tags (e.g., `<game-container></game-container>`).
+- The next step is to improve the `search.js` file to provide a better user experience. I will add a loading indicator and a 'no results' message.

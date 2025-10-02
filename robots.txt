@@ -1,2 +1,7 @@
+# robotstxt.org/
+
 User-agent: *
-Sitemap: https://www.weathering.online/sitemap.xml
+Disallow: /search
+Allow: /
+
+Sitemap: https://weatheringonline.com/sitemap.xml

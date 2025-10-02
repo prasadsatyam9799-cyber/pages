@@ -3,16 +3,16 @@
 <html lang="en">
 <head>
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PQH5R6Q2');</script>
-<!-- End Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PQH5R6Q2');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Weathering Online</title>
-    <meta name="description" content="Your source for weather information.">
+    <meta name="description" content="Your source for weather information, news, and interactive games.">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Google tag (gtag.js) -->
@@ -29,35 +29,66 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQH5R6Q2"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-    <div class="dropdown">
-      <button class="dropbtn" aria-label="Toggle navigation menu">&#9776;</button>
-      <div id="myDropdown" class="dropdown-content">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="sports.html">Sports</a>
-        <a href="health.html">Health</a>
-        <a href="tap-game.html">Team Tap Challenge</a>
-      </div>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQH5R6Q2"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="container">
+        <nav class="navbar">
+            <a href="index.html" class="logo">WeatheringOnline</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <div class="dropdown">
+                    <button class="dropbtn">More <span class="material-icons">arrow_drop_down</span></button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="sports.html">Sports</a>
+                        <a href="health.html">Health</a>
+                        <a href="tap-game.html">Team Tap Challenge</a>
+                        <a href="privacy.html">Privacy</a>
+                        <a href="terms.html">Terms</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <header class="hero">
+            <div class="hero-text">
+                <h1>Welcome to Weathering Online</h1>
+                <p>Your one-stop destination for accurate weather forecasts, news, and engaging content.</p>
+                <div class="search-section">
+                    <input type="text" id="searchInput" placeholder="Search the site...">
+                    <button id="searchButton" class="search-button"><span class="material-icons">search</span></button>
+                </div>
+                <div id="searchResults"></div>
+            </div>
+        </header>
+
+        <main>
+            <section class="featured-articles">
+                <h2>Featured Articles</h2>
+                <div class="articles-grid">
+                    <a href="sports.html" class="article-card">
+                        <img src="https://storage.googleapis.com/tag-lang-edge-upg.appspot.com/assets/sports.jpg" alt="Sports">
+                        <h3>Sports</h3>
+                        <p>Latest updates from the world of sports.</p>
+                    </a>
+                    <a href="health.html" class="article-card">
+                        <img src="https://storage.googleapis.com/tag-lang-edge-upg.appspot.com/assets/health.jpg" alt="Health">
+                        <h3>Health</h3>
+                        <p>Stay informed about your health and wellness.</p>
+                    </a>
+                    <a href="tap-game.html" class="article-card">
+                        <img src="https://storage.googleapis.com/tag-lang-edge-upg.appspot.com/assets/tap-game.jpg" alt="Tap Game">
+                        <h3>Team Tap Challenge</h3>
+                        <p>Join our collaborative tap game and win prizes!</p>
+                    </a>
+                </div>
+            </section>
+        </main>
     </div>
-    <a href="index.html" class="home-icon" aria-label="Home"><i class="material-icons">home</i></a>
-    <header>
-        <h1>Welcome to Weathering Online</h1>
-    </header>
-    <main>
-        <div class="search-container">
-            <label for="searchInput" class="visually-hidden">Search</label>
-            <input type="text" id="searchInput" placeholder="Search...">
-            <button id="searchButton">Search</button>
-        </div>
-        <div id="searchResults"></div>
-        <p>Your one-stop destination for accurate and up-to-date weather forecasts. We provide detailed weather information to help you plan your day.</p>
-    </main>
+
     <script src="main.js"></script>
     <script src="search.js"></script>
 </body>

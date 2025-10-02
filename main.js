@@ -1,18 +1,33 @@
-document.addEventListener("DOMContentLoaded", function() {
-  document.querySelector(".dropbtn").addEventListener("click", function(){
-    document.getElementById("myDropdown").classList.toggle("show");
-  });
 
-  window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdown = document.querySelector('.dropdown');
+    const dropdownContent = document.getElementById('myDropdown');
+
+    if (dropdown) {
+        dropdown.addEventListener('click', function(event) {
+            event.stopPropagation();
+            dropdownContent.classList.toggle('show');
+        });
     }
-  }
+
+    window.addEventListener('click', function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            if (dropdownContent.classList.contains('show')) {
+                dropdownContent.classList.remove('show');
+            }
+        }
+    });
+
+    window.onscroll = function() {stickyNavbar()};
+
+    var navbar = document.querySelector(".navbar");
+    var sticky = navbar.offsetTop;
+
+    function stickyNavbar() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
 });
