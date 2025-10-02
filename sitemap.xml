@@ -21,17 +21,17 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.weathering.online/health-fitness.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.weathering.online/about.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.weathering.online/sports-news.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.weathering.online/terms.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.weathering.online/privacy-policy.html</loc>
+    <loc>https://www.weathering.online/privacy.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
