@@ -13,6 +13,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <title>Welcome to Weathering Online</title>
     <meta name="description" content="Your source for weather information.">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9GV98PJVFZ"></script>
     <script>
@@ -31,7 +32,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
     <div class="dropdown">
-      <button class="dropbtn">&#8942;</button>
+      <button class="dropbtn" aria-label="Toggle navigation menu">&#9776;</button>
       <div id="myDropdown" class="dropdown-content">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -42,12 +43,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="health.html">Health</a>
       </div>
     </div>
-    <a href="index.html" class="home-icon">&#127968;</a>
+    <a href="index.html" class="home-icon" aria-label="Home"><i class="material-icons">home</i></a>
     <header>
         <h1>Welcome to Weathering Online</h1>
     </header>
     <main>
         <div class="search-container">
+            <label for="searchInput" class="visually-hidden">Search</label>
             <input type="text" id="searchInput" placeholder="Search...">
             <button id="searchButton">Search</button>
         </div>
