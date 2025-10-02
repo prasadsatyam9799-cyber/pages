@@ -12,15 +12,18 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
+        searchResults.innerHTML = '<p>Loading...</p>';
+
         fetch('sitemap.xml')
             .then(response => response.text())
             .then(text => {
                 const parser = new DOMParser();
                 const xmlDoc = parser.parseFromString(text, 'text/xml');
                 const urls = Array.from(xmlDoc.getElementsByTagName('loc')).map(loc => loc.textContent);
+                let found = false;
 
-                urls.forEach(url => {
-                    fetch(url)
+                const promises = urls.map(url => {
+                    return fetch(url)
                         .then(response => response.text())
                         .then(text => {
                             const docParser = new DOMParser();
@@ -28,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             const content = doc.body.textContent.toLowerCase();
                             
                             if (content.includes(query)) {
+                                found = true;
                                 const result = document.createElement('a');
                                 result.href = url;
                                 result.textContent = doc.title;
@@ -35,6 +39,18 @@ document.addEventListener('DOMContentLoaded', function () {
                                 searchResults.appendChild(document.createElement('br'));
                             }
                         });
+                });
+
+                Promise.all(promises).then(() => {
+                    if (!found) {
+                        searchResults.innerHTML = '<p>No results found.</p>';
+                    } else {
+                        // Remove the loading message
+                        const loadingMessage = searchResults.querySelector('p');
+                        if (loadingMessage && loadingMessage.textContent === 'Loading...') {
+                            searchResults.removeChild(loadingMessage);
+                        }
+                    }
                 });
             });
     });
