@@ -1,0 +1,43 @@
+/* health.css */
+
+body {
+    background-color: #f0f2f5;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+h1 {
+    text-align: center;
+    color: #005a4d;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #005a4d;
+    color: #fff;
+    padding: 0.8rem 1.2rem;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #003d33;
+    transform: translateY(-3px);
+}

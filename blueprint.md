@@ -15,6 +15,7 @@ This project is a simple, framework-less web application for displaying weather 
 *   `contact.html`: A contact page for the application.
 *   `privacy.html`: A privacy policy page for the application.
 *   `terms.html`: A terms of service page for the application.
+*   `health.html`: A health and fitness guide.
 
 ### Design
 
@@ -31,4 +32,9 @@ This project is a simple, framework-less web application for displaying weather 
 
 ## Current Plan
 
-I have just finished integrating Google Tag Manager into the application. My next step is to create a more robust and feature-rich application. I will start by adding a search bar to the home page that allows users to search for a specific location. I will also add a weather forecast section that displays the weather for the next few days. Finally, I will add a map that displays the current weather conditions for the entire world.
+I will improve the `health.html` page by:
+
+1.  **Improving the visuals:** I will create a new CSS file, `health.css`, and link it to `health.html`. I will then add a more modern design, including a better color palette, custom fonts, and a "Back to Top" button.
+2.  **Adding interactivity:** I will make the sections collapsible and add smooth scrolling.
+3.  **Refactoring the sections into a reusable Web Component:** I will create a new JavaScript file, `health.js`, and define a new custom element, `<health-section>`. This will make the code cleaner and easier to maintain.
+4.  **Adding a navigation link to `health.html` from `index.html`:** I will add a link to the new page in the main navigation menu.

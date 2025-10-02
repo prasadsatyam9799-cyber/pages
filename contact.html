@@ -36,12 +36,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="contact.html">Contact</a>
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
+        <a href="sports.html">Sports</a>
+        <a href="health.html">Health</a>
       </div>
     </div>
     <header>
         <h1>Contact Us</h1>
     </header>
     <main>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button id="searchButton">Search</button>
+        </div>
+        <div id="searchResults"></div>
         <p>For any inquiries, please email us at <a href="mailto:info@weathering.online">info@weathering.online</a>.</p>
         <form>
             <label for="name">Name:</label><br>
@@ -52,5 +59,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </form>
     </main>
     <script src="main.js"></script>
+    <script src="search.js"></script>
 </body>
 </html>
