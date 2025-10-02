@@ -11,6 +11,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Health & Fitness Guide</title>
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="health.css">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9GV98PJVFZ"></script>
@@ -23,13 +24,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </script>
 </head>
 <body>
+    <a href="index.html" class="home-icon">&#127968;</a>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQH5R6Q2"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+    <div class="dropdown">
+      <button class="dropbtn">&#8942;</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="sports.html">Sports</a>
+        <a href="health.html">Health</a>
+      </div>
+    </div>
 
   <div class="container">
-    <h1>Health & Fitness Guide</h1>
+    <header>
+        <h1>Health & Fitness Guide</h1>
+    </header>
+    <main>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button id="searchButton">Search</button>
+        </div>
+        <div id="searchResults"></div>
 
     <health-section title="1. Introduction: Why Health & Fitness Matter">
       <p>Health and fitness are the foundation of a happy and energetic life. A healthy lifestyle helps improve physical strength, mental clarity, and emotional stability. People who maintain fitness tend to live longer, stay more active, and enjoy better immunity against diseases.</p>
@@ -97,11 +119,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p>Gentle activities like walking, stretching, and chair yoga improve mobility and prevent falls. Calcium and Vitamin D keep bones healthy. Staying socially active reduces loneliness and depression. Gentle strength training helps maintain independence in daily life.</p>
         <p class="summary">Summary: Gentle exercise, social activity, and nutrition support healthy aging.</p>
     </health-section>
-
+    </main>
   </div>
 
   <a href="#" class="back-to-top">↑</a>
 
+  <script src="main.js"></script>
+  <script src="search.js"></script>
   <script src="health.js"></script>
 </body>
 </html>

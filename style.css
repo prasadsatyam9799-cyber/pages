@@ -92,3 +92,13 @@ form input[type=\"submit\"] {
 #searchResults {
     margin-top: 10px;
 }
+
+.home-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 32px;
+    text-decoration: none;
+    color: #333;
+    z-index: 1000;
+}
