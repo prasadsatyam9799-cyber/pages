@@ -1,0 +1,43 @@
+
+{
+  "rules": {
+    "players": {
+      "$uid": {
+        ".read": "$uid === auth.uid",
+        ".write": "$uid === auth.uid && newData.exists()",
+        "tapCount": {
+          ".validate": "newData.isNumber() && newData.val() >= 219000 && newData.val() <= 375000"
+        },
+        "lastSharedAt": {
+            ".validate": "newData.isNumber()"
+        },
+        "revealUnlockAt": {
+            ".validate": "newData.isNumber() || newData.val() === null"
+        },
+        "redeemCode": {
+            ".validate": "newData.isString() || newData.val() === null"
+        },
+        "nextAvailableAt": {
+            ".validate": "newData.isNumber() || newData.val() === null"
+        },
+        "completed": {
+            ".validate": "newData.isBoolean()"
+        }
+      }
+    },
+    "freefire_codes": {
+      "F3Y4V699UCNW2Z6E": {
+        ".read": "root.child('players').child(auth.uid).child('redeemCode').val() === 'F3Y4V699UCNW2Z6E'",
+        ".write": "!data.exists() || (data.child('assigned').val() === false && newData.child('assigned').val() === true && newData.child('assignedTo').val() === auth.uid)"
+      }
+    },
+    "settings": {
+      ".read": true,
+      ".write": false
+    },
+    "progress": {
+      ".read": true,
+      ".write": "newData.child('totalCompletions').isNumber()"
+    }
+  }
+}

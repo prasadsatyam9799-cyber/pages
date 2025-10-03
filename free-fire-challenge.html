@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Fire Tap Challenge - Weathering Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="free-fire-challenge.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9GV98PJVFZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9GV98PJVFZ');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_CLIENT_ID" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <a href="index.html" class="logo">WeatheringOnline</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">More</a>
+                    <div class="dropdown-content">
+                        <a href="sports.html">Sports</a>
+                        <a href="health.html">Health</a>
+                        <a href="privacy.html">Privacy</a>
+                        <a href="terms.html">Terms</a>
+                        <a href="free-fire-challenge.html">Free Fire Challenge</a>
+                    </div>
+                </div>
+            </div>
+            <button class="menu-btn"><span class="material-icons">menu</span></button>
+        </nav>
+
+        <header class="hero">
+            <h1>Free Fire Tap Challenge</h1>
+            <p>Tap your way to a Free Fire redeem code!</p>
+        </header>
+
+        <main class="challenge-content">
+            <!-- AdSense Ad Unit -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR_ADSENSE_CLIENT_ID"
+                 data-ad-slot="YOUR_AD_SLOT_ID"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+
+            <div class="tap-container">
+                <div class="progress-bar-container">
+                    <div class="progress-bar"></div>
+                </div>
+                <button id="tap-button" class="tap-button">Tap!</button>
+                <div class="tap-counters">
+                    <p>Taps: <span id="current-taps">219,000</span> / 375,000</p>
+                    <p>Remaining: <span id="remaining-taps">156,000</span></p>
+                </div>
+            </div>
+
+            <div id="share-modal" class="modal">
+                <div class="modal-content">
+                    <h2>Share to Continue!</h2>
+                    <p>You've made great progress! Share your achievement to continue tapping.</p>
+                    <button id="share-button" class="btn">Share</button>
+                </div>
+            </div>
+
+            <div id="countdown-modal" class="modal">
+                <div class="modal-content">
+                    <h2>Challenge Complete!</h2>
+                    <p>Your redeem code will be revealed in:</p>
+                    <p id="countdown-timer">10:00</p>
+                </div>
+            </div>
+
+            <div id="redeem-code-container" class="redeem-code-container" style="display: none;">
+                <h2>Your Redeem Code</h2>
+                <p id="redeem-code"></p>
+                <p id="redeem-message"></p>
+            </div>
+
+            <!-- AdSense Ad Unit -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR_ADSENSE_CLIENT_ID"
+                 data-ad-slot="YOUR_AD_SLOT_ID"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </main>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js" type="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js" type="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js" type="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js" type="module"></script>
+    <script src="tap-challenge.js" type="module"></script>
+    <script src="main.js"></script>
+</body>
+</html>

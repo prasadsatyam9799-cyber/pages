@@ -3,7 +3,7 @@
 
 ## Overview
 
-This project is a responsive website for "Weathering Online," a source for weather information, news, and interactive games. It features a clean, modern design with a focus on user experience and accessibility.
+This project is a responsive website for "Weathering Online," a source for weather information, news, and interactive games. The current focus is on building a "Tap Challenge" game on the "Free Fire Challenge" page.
 
 ## Implemented Styles, Designs, and Features
 
@@ -11,22 +11,42 @@ This project is a responsive website for "Weathering Online," a source for weath
 *   **Modern CSS:** Uses modern CSS features like Flexbox and Grid for layout, relative units for sizing, and media queries for breakpoints.
 *   **Web Components:** Utilizes Web Components for creating reusable UI elements.
 *   **Accessibility:** Implements accessibility features to ensure the website is usable by everyone.
-*   **Visual Design:**
-    *   **Aesthetics:** Clean and visually balanced layout with a modern design.
-    *   **Fonts:** Uses the "Lato" font for readability.
-    *   **Color Palette:** A vibrant and energetic color palette with a primary color of blue.
-    *   **Iconography:** Uses Material Icons to enhance user understanding.
-    *   **Interactivity:** Interactive elements with hover effects and transitions.
 
-## Current Task: Make Website Fully Responsive
+## Current Task: Build the "Tap Challenge" Page
 
 ### Plan:
 
-1.  **Add `box-sizing: border-box`:** Apply `box-sizing: border-box` to all elements for more intuitive layout calculations.
-2.  **Add Media Queries:**
-    *   **1200px (Desktop):** Adjust layout for large screens.
-    *   **768px (Tablet):** Adjust layout for tablets, including a stacked navbar.
-    *   **480px (Mobile):** Adjust layout for mobile devices, with a focus on readability and usability.
-3.  **Update Navbar:** Make the navbar stack vertically on small screens.
-4.  **Responsive Images:** Ensure images resize proportionally.
-5.  **Scalable Text:** Ensure text scales for readability on different screen sizes.
+1.  **Firebase Setup**:
+    *   Install the Firebase SDK.
+    *   Create a `tap-challenge.js` file.
+    *   Add Firebase configuration and initialize the Firebase app and Analytics.
+    *   Enable Anonymous Authentication in the Firebase console.
+    *   Set up Firebase Realtime Database.
+
+2.  **Frontend Development (`free-fire-challenge.html` & `free-fire-challenge.css`)**:
+    *   Create the UI for the tap challenge, including:
+        *   A main tap button.
+        *   A progress bar showing taps from 219,000 to 375,000.
+        *   Tap counters (current and remaining).
+        *   A modal for the share requirement.
+        *   A countdown timer.
+        *   A section to display the final redeem code.
+
+3.  **Game Logic (`tap-challenge.js`)**:
+    *   Implement anonymous user sign-in.
+    *   Handle tap events and update the player's `tapCount` in Firebase.
+    *   Implement the sharing requirement every 1,000 taps.
+    *   Trigger the countdown timer when the tap goal is reached.
+    *   Reveal the redeem code after the countdown.
+    *   Track `totalCompletions` in Firebase.
+    *   Assign the `redeemCode` to the player only after 5 total completions.
+    *   Implement a 3-day cooldown period for players who have redeemed a code.
+
+4.  **Google Analytics & AdSense**:
+    *   Add the GA4 tracking script to the HTML.
+    *   Set up custom event tracking for key actions (e.g., `tap`, `share_prompt`, `goal_complete`, `code_redeemed`).
+    *   Integrate AdSense placeholders for monetization.
+
+5.  **Firebase Security Rules**:
+    *   Define security rules for the Realtime Database to ensure data integrity and prevent cheating.
+
