@@ -1,19 +1,24 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PQH5R6Q2');</script>
-<!-- End Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PQH5R6Q2');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service - Weathering Online</title>
     <meta name="description" content="Terms of Service for Weathering Online.">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="terms.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9GV98PJVFZ"></script>
     <script>
@@ -27,35 +32,101 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
      crossorigin="anonymous"></script>
 </head>
 <body>
-    <a href="index.html" class="home-icon" aria-label="Home"><i class="material-icons">home</i></a>
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQH5R6Q2"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-    <div class="dropdown">
-      <button class="dropbtn" aria-label="Toggle navigation menu">&#9776;</button>
-      <div id="myDropdown" class="dropdown-content">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="sports.html">Sports</a>
-        <a href="health.html">Health</a>
-      </div>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQH5R6Q2"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="container">
+        <nav class="navbar">
+            <a href="index.html" class="logo">WeatheringOnline</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <div class="dropdown">
+                    <a href="#" class="dropbtn active">More</a>
+                    <div class="dropdown-content">
+                        <a href="sports.html">Sports</a>
+                        <a href="health.html">Health</a>
+                        <a href="privacy.html">Privacy</a>
+                        <a href="terms.html">Terms</a>
+                    </div>
+                </div>
+            </div>
+            <button class="menu-btn"><span class="material-icons">menu</span></button>
+        </nav>
+
+        <header class="terms-hero">
+            <div class="hero-text">
+                <h1>Terms of Service</h1>
+                <p>Please read these terms carefully before using our service.</p>
+            </div>
+        </header>
+
+        <main>
+            <div class="terms-container">
+                <div class="terms-content">
+                    <section class="terms-section" aria-labelledby="acceptance-heading">
+                        <h2 id="acceptance-heading">1. Acceptance of Terms</h2>
+                        <p>By accessing and using our website, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
+                    </section>
+                    <section class="terms-section" aria-labelledby="content-use-heading">
+                        <h2 id="content-use-heading">2. Content and Use</h2>
+                        <p>All content on this website is for informational purposes only. We are not responsible for any errors or omissions, or for the results obtained from the use of this information. All information on this site is provided "as is" with no guarantee of completeness, accuracy, or timeliness.</p>
+                    </section>
+                    <section class="terms-section" aria-labelledby="user-conduct-heading">
+                        <h2 id="user-conduct-heading">3. User Conduct</h2>
+                        <p>You agree not to use the website for any unlawful purpose or any purpose prohibited under this clause. You agree not to use the website in any way that could damage the website, the services, or the general business of Weathering Online.</p>
+                    </section>
+                    <section class="terms-section" aria-labelledby="changes-terms-heading">
+                        <h2 id="changes-terms-heading">4. Changes to Terms</h2>
+                        <p>We reserve the right to change these terms at any time. We will do our best to inform you of any significant changes, but it is your responsibility to check this page for updates.</p>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo">WeatheringOnline</a>
+                    <p>Your source for weather information, news, and interactive games.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="sports.html">Sports</a></li>
+                        <li><a href="health.html">Health</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><span class="material-icons">facebook</span></a>
+                        <a href="#" aria-label="Twitter"><span class="material-icons">twitter</span></a>
+                        <a href="#" aria-label="Instagram"><span class="material-icons">instagram</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Weathering Online. All Rights Reserved.</p>
+            </div>
+        </footer>
     </div>
-    <header>
-        <h1>Terms of Service</h1>
-    </header>
-    <main>
-        <div class="search-container">
-            <label for="searchInput" class="visually-hidden">Search</label>
-            <input type="text" id="searchInput" placeholder="Search...">
-            <button id="searchButton">Search</button>
-        </div>
-        <div id="searchResults"></div>
-        <p>This page outlines our terms of service.</p>
-    </main>
+
+    <button id="back-to-top-btn" aria-label="Back to top"><span class="material-icons">arrow_upward</span></button>
+
     <script src="main.js"></script>
     <script src="search.js"></script>
 </body>

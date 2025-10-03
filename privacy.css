@@ -1,0 +1,45 @@
+
+.privacy-hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1558522195-e1a02821a364?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.hero-text h1 {
+    font-size: var(--h1-font-size);
+    font-weight: 900;
+}
+
+.privacy-container {
+    padding: 80px 0;
+}
+
+.privacy-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--card-background);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px var(--shadow-color);
+}
+
+.privacy-section {
+    margin-bottom: 30px;
+}
+
+.privacy-section h2 {
+    font-size: var(--h2-font-size);
+    font-weight: 900;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.privacy-section p {
+    line-height: 1.8;
+    font-size: 1.1em;
+}

@@ -15,6 +15,9 @@
     <meta name="description" content="Your source for weather information, news, and interactive games.">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9GV98PJVFZ"></script>
     <script>
@@ -37,12 +40,12 @@
         <nav class="navbar">
             <a href="index.html" class="logo">WeatheringOnline</a>
             <div class="nav-links">
-                <a href="index.html">Home</a>
+                <a href="index.html" class="active">Home</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
                 <div class="dropdown">
-                    <button class="dropbtn">More <span class="material-icons">arrow_drop_down</span></button>
-                    <div id="myDropdown" class="dropdown-content">
+                    <a href="#" class="dropbtn">More</a>
+                    <div class="dropdown-content">
                         <a href="sports.html">Sports</a>
                         <a href="health.html">Health</a>
                         <a href="privacy.html">Privacy</a>
@@ -50,38 +53,107 @@
                     </div>
                 </div>
             </div>
+            <button class="menu-btn"><span class="material-icons">menu</span></button>
         </nav>
 
         <header class="hero">
             <div class="hero-text">
-                <h1>Welcome to Weathering Online</h1>
-                <p>Your one-stop destination for accurate weather forecasts, news, and engaging content.</p>
+                <h1>Explore the World's Weather</h1>
+                <p>Accurate forecasts, breaking news, and interactive content. Your journey into the elements starts here.</p>
                 <div class="search-section">
-                    <input type="text" id="searchInput" placeholder="Search the site...">
-                    <button id="searchButton" class="search-button"><span class="material-icons">search</span></button>
+                    <input type="text" id="searchInput" placeholder="Search for news, articles, and more..." aria-label="Search">
+                    <button id="searchButton" class="search-button" aria-label="Search"><span class="material-icons">search</span></button>
                 </div>
                 <div id="searchResults"></div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Weather">
             </div>
         </header>
 
         <main>
-            <section class="featured-articles">
-                <h2>Featured Articles</h2>
+            <section class="featured-articles" aria-labelledby="featured-articles-heading">
+                <h2 id="featured-articles-heading">Featured Articles</h2>
                 <div class="articles-grid">
-                    <a href="sports.html" class="article-card">
-                        <img src="https://storage.googleapis.com/tag-lang-edge-upg.appspot.com/assets/sports.jpg" alt="Sports">
-                        <h3>Sports</h3>
-                        <p>Latest updates from the world of sports.</p>
-                    </a>
-                    <a href="health.html" class="article-card">
-                        <img src="https://storage.googleapis.com/tag-lang-edge-upg.appspot.com/assets/health.jpg" alt="Health">
-                        <h3>Health</h3>
-                        <p>Stay informed about your health and wellness.</p>
-                    </a>
+                    <article class="article-card">
+                        <a href="sports.html">
+                            <img src="https://images.pexels.com/photos/209977/pexels-photo-209977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sports">
+                            <div class="article-content">
+                                <h3>The World of Sports</h3>
+                                <p>Dive into the latest updates, highlights, and stories from the sports world.</p>
+                                <span>Read More <span class="material-icons">arrow_forward</span></span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="article-card">
+                        <a href="health.html">
+                            <img src="https://images.pexels.com/photos/1128318/pexels-photo-1128318.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Health">
+                            <div class="article-content">
+                                <h3>Your Guide to Wellness</h3>
+                                <p>Discover tips and advice for a healthier and happier lifestyle.</p>
+                                <span>Read More <span class="material-icons">arrow_forward</span></span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="article-card">
+                        <a href="about.html">
+                            <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="About Us">
+                            <div class="article-content">
+                                <h3>About Us</h3>
+                                <p>Learn more about our mission and the team behind Weathering Online.</p>
+                                <span>Read More <span class="material-icons">arrow_forward</span></span>
+                            </div>
+                        </a>
+                    </article>
                 </div>
             </section>
+
+            <section class="cta-section" aria-labelledby="cta-heading">
+                <h2 id="cta-heading">Ready to Dive In?</h2>
+                <p>Explore our content and start your journey with Weathering Online today.</p>
+                <a href="#featured-articles" class="cta-button">Explore Articles</a>
+            </section>
         </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo">WeatheringOnline</a>
+                    <p>Your source for weather information, news, and interactive games.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="sports.html">Sports</a></li>
+                        <li><a href="health.html">Health</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><span class="material-icons">facebook</span></a>
+                        <a href="#" aria-label="Twitter"><span class="material-icons">twitter</span></a>
+                        <a href="#" aria-label="Instagram"><span class="material-icons">instagram</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Weathering Online. All Rights Reserved.</p>
+            </div>
+        </footer>
     </div>
+
+    <button id="back-to-top-btn" aria-label="Back to top"><span class="material-icons">arrow_upward</span></button>
 
     <script src="main.js"></script>
     <script src="search.js"></script>

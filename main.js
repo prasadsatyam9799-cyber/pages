@@ -1,33 +1,44 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    const dropdown = document.querySelector('.dropdown');
-    const dropdownContent = document.getElementById('myDropdown');
+    const menuBtn = document.querySelector('.menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    const backToTopBtn = document.getElementById('back-to-top-btn');
 
-    if (dropdown) {
-        dropdown.addEventListener('click', function(event) {
-            event.stopPropagation();
-            dropdownContent.classList.toggle('show');
+    // Sticky navbar and Back to Top button functionality
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        const sticky = navbar.offsetTop;
+        window.onscroll = function() {
+            // Sticky navbar
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add('sticky');
+            } else {
+                navbar.classList.remove('sticky');
+            }
+
+            // Back to top button
+            if (backToTopBtn) {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    backToTopBtn.style.display = "block";
+                } else {
+                    backToTopBtn.style.display = "none";
+                }
+            }
+        };
+    }
+
+    // Hamburger menu functionality
+    if (menuBtn && navLinks) {
+        menuBtn.addEventListener('click', function() {
+            navLinks.classList.toggle('mobile-menu');
         });
     }
 
-    window.addEventListener('click', function(event) {
-        if (!event.target.matches('.dropbtn')) {
-            if (dropdownContent.classList.contains('show')) {
-                dropdownContent.classList.remove('show');
-            }
-        }
-    });
-
-    window.onscroll = function() {stickyNavbar()};
-
-    var navbar = document.querySelector(".navbar");
-    var sticky = navbar.offsetTop;
-
-    function stickyNavbar() {
-        if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-        } else {
-            navbar.classList.remove("sticky");
-        }
+    // Back to top button click event
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', function() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        });
     }
 });
