@@ -1,52 +1,29 @@
-
 # Project Blueprint
 
 ## Overview
 
-This project is a responsive website for "Weathering Online," a source for weather information, news, and interactive games. The current focus is on building a "Tap Challenge" game on the "Free Fire Challenge" page.
+This project is a responsive website for "Weathering Online," a source for weather information, news, and interactive content. The site features a clean, modern design with a focus on user experience and accessibility.
 
 ## Implemented Styles, Designs, and Features
 
-*   **Responsive Design:** The website is fully responsive and adapts to different screen sizes, including desktops, tablets, and mobile devices.
-*   **Modern CSS:** Uses modern CSS features like Flexbox and Grid for layout, relative units for sizing, and media queries for breakpoints.
-*   **Web Components:** Utilizes Web Components for creating reusable UI elements.
-*   **Accessibility:** Implements accessibility features to ensure the website is usable by everyone.
+*   **Responsive Layout:** The website is fully responsive, adapting to desktops, tablets, and mobile devices.
+*   **Modern CSS:** The project utilizes modern CSS practices, including a mobile-first approach, CSS variables for theming, and a clean, organized stylesheet.
+*   **Featured Articles:** The homepage highlights three featured articles with relevant imagery and links to their respective pages:
+    *   Understanding Weather Patterns
+    *   The Science of Climate Change
+    *   Extreme Weather Events
+*   **Navigation:** A responsive navigation bar with a dropdown menu provides easy access to all pages.
+*   **Footer:** A comprehensive footer includes quick links, legal information, and social media icons.
 
-## Current Task: Build the "Tap Challenge" Page
+## Current Task: Refine Content and Navigation
+
+The goal is to replace the generic placeholder articles with content more relevant to the "Weathering Online" theme and create the corresponding pages.
 
 ### Plan:
 
-1.  **Firebase Setup**:
-    *   Install the Firebase SDK.
-    *   Create a `tap-challenge.js` file.
-    *   Add Firebase configuration and initialize the Firebase app and Analytics.
-    *   Enable Anonymous Authentication in the Firebase console.
-    *   Set up Firebase Realtime Database.
-
-2.  **Frontend Development (`free-fire-challenge.html` & `free-fire-challenge.css`)**:
-    *   Create the UI for the tap challenge, including:
-        *   A main tap button.
-        *   A progress bar showing taps from 219,000 to 375,000.
-        *   Tap counters (current and remaining).
-        *   A modal for the share requirement.
-        *   A countdown timer.
-        *   A section to display the final redeem code.
-
-3.  **Game Logic (`tap-challenge.js`)**:
-    *   Implement anonymous user sign-in.
-    *   Handle tap events and update the player's `tapCount` in Firebase.
-    *   Implement the sharing requirement every 1,000 taps.
-    *   Trigger the countdown timer when the tap goal is reached.
-    *   Reveal the redeem code after the countdown.
-    *   Track `totalCompletions` in Firebase.
-    *   Assign the `redeemCode` to the player only after 5 total completions.
-    *   Implement a 3-day cooldown period for players who have redeemed a code.
-
-4.  **Google Analytics & AdSense**:
-    *   Add the GA4 tracking script to the HTML.
-    *   Set up custom event tracking for key actions (e.g., `tap`, `share_prompt`, `goal_complete`, `code_redeemed`).
-    *   Integrate AdSense placeholders for monetization.
-
-5.  **Firebase Security Rules**:
-    *   Define security rules for the Realtime Database to ensure data integrity and prevent cheating.
-
+1.  **Update Featured Articles:**
+    *   Replaced the existing "Sports," "Health," and "About Us" articles with "Understanding Weather Patterns," "The Science of Climate Change," and "Extreme Weather Events."
+2.  **Create New HTML Pages:**
+    *   Created `weather-patterns.html`, `climate-change.html`, and `extreme-weather.html` with placeholder content.
+3.  **Update Navigation:**
+    *   Removed the "Free Fire Challenge" link and added links to the new article pages in the main navigation and footer.

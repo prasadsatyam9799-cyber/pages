@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Analyzer - Weathering Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="image-analyzer.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <a href="index.html" class="logo">WeatheringOnline</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">More</a>
+                    <div class="dropdown-content">
+                        <a href="weather-patterns.html">Weather Patterns</a>
+                        <a href="climate-change.html">Climate Change</a>
+                        <a href="extreme-weather.html">Extreme Weather</a>
+                        <a href="image-analyzer.html" class="active">Image Analyzer</a>
+                        <a href="privacy.html">Privacy</a>
+                        <a href="terms.html">Terms</a>
+                    </div>
+                </div>
+            </div>
+            <button class="menu-btn"><span class="material-icons">menu</span></button>
+        </nav>
+
+        <main>
+            <section class="article-page">
+                <h2>Image Analyzer</h2>
+                <p>Upload an image to get an AI-powered description of its contents.</p>
+                <div class="image-analyzer-container">
+                    <input type="file" id="image-upload" accept="image/*">
+                    <label for="image-upload" class="upload-label">Choose an image</label>
+                    <button id="analyze-btn">Analyze</button>
+                    <div id="image-preview"></div>
+                    <div id="analysis-result"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Weathering Online. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+    <script src="image-analyzer.js"></script>
+</body>
+</html>

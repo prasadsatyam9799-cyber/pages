@@ -1,0 +1,52 @@
+
+.image-analyzer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+#image-upload {
+    display: none;
+}
+
+.upload-label {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+#analyze-btn {
+    padding: 1rem 2rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+#image-preview {
+    max-width: 100%;
+    max-height: 400px;
+    margin-bottom: 1rem;
+}
+
+#image-preview img {
+    max-width: 100%;
+    max-height: 400px;
+    border-radius: 5px;
+}
+
+#analysis-result {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-height: 100px;
+    background-color: #f8f9fa;
+}
