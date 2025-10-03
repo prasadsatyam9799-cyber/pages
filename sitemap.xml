@@ -4,49 +4,56 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
 
 <url>
   <loc>https://weatheringonline.com/</loc>
-  <lastmod>2024-07-25T19:35:10+00:00</lastmod>
+  <lastmod>2024-07-26T00:00:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://weatheringonline.com/index.html</loc>
-  <lastmod>2024-07-25T19:35:10+00:00</lastmod>
+  <lastmod>2024-07-26T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://weatheringonline.com/about.html</loc>
-  <lastmod>2024-07-25T19:35:10+00:00</lastmod>
+  <lastmod>2024-07-26T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://weatheringonline.com/contact.html</loc>
-  <lastmod>2024-07-25T19:35:10+00:00</lastmod>
+  <lastmod>2024-07-26T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://weatheringonline.com/weather-patterns.html</loc>
+  <lastmod>2024-07-26T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://weatheringonline.com/climate-change.html</loc>
+  <lastmod>2024-07-26T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://weatheringonline.com/extreme-weather.html</loc>
+  <lastmod>2024-07-26T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://weatheringonline.com/image-analyzer.html</loc>
+  <lastmod>2024-07-26T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://weatheringonline.com/privacy.html</loc>
-  <lastmod>2024-07-25T19:35:10+00:00</lastmod>
+  <lastmod>2024-07-26T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://weatheringonline.com/terms.html</loc>
-  <lastmod>2024-07-25T19:35:10+00:00</lastmod>
+  <lastmod>2024-07-26T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-<url>
-  <loc>https://weatheringonline.com/sports.html</loc>
-  <lastmod>2024-07-25T19:35:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://weatheringonline.com/health.html</loc>
-  <lastmod>2024-07-25T19:35:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
 
 </urlset>
