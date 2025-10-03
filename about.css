@@ -10,7 +10,7 @@
     margin-top: 20px;
 }
 
-.hero-text h1 {
+.about-hero h1 {
     font-size: var(--h1-font-size);
     font-weight: 900;
 }
@@ -102,4 +102,27 @@
     font-style: italic;
     color: var(--primary-color);
     font-weight: 700;
+}
+
+/*-- Media Queries --*/
+@media (max-width: 768px) {
+    .about-section,
+    .about-section.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-hero {
+        padding: 60px 20px;
+    }
+
+    .about-hero h1 {
+        font-size: 2.25rem;
+    }
 }

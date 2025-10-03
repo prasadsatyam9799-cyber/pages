@@ -13,6 +13,12 @@
     --p-font-size: 1.1rem;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: var(--font-family);
     margin: 0;
@@ -22,6 +28,7 @@ body {
 }
 
 .container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -138,16 +145,18 @@ body {
 .hero-image img {
     max-width: 100%;
     height: auto;
+    border-radius: 15px;
 }
 
 .search-section {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    max-width: 500px;
 }
 
 #searchInput {
-    width: 70%;
+    width: 100%;
     padding: 15px 20px;
     border-radius: 30px;
     border: 1px solid #ced4da;
@@ -396,7 +405,42 @@ body {
     transform: translateY(-3px);
 }
 
-@media (max-width: 992px) {
+/*-- Media Queries --*/
+
+/* Desktop */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 992px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        box-shadow: 0 2px 5px var(--shadow-color);
+    }
+    
+    .nav-links.mobile-menu {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 15px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
     .hero {
         flex-direction: column;
         text-align: center;
@@ -405,26 +449,9 @@ body {
     .hero-text {
         margin-bottom: 40px;
     }
-}
 
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background-color: white;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    .nav-links.mobile-menu {
-        display: flex;
-    }
-
-    .menu-btn {
-        display: block;
+    .search-section {
+        margin: 0 auto 20px;
     }
 
     .footer-content {
@@ -436,5 +463,35 @@ body {
     .footer-logo, .footer-links, .footer-social {
         width: 100%;
         margin-bottom: 30px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    :root {
+        --h1-font-size: 2.5rem;
+        --h2-font-size: 1.75rem;
+        --h3-font-size: 1.25rem;
+        --p-font-size: 1rem;
+    }
+
+    .hero-text h1 {
+        font-size: var(--h1-font-size);
+    }
+    
+    .hero-text p {
+        font-size: var(--p-font-size);
+    }
+    
+    .cta-section h2 {
+        font-size: var(--h2-font-size);
+    }
+    
+    .cta-section p {
+        font-size: var(--p-font-size);
+    }
+    
+    .article-card h3 {
+        font-size: var(--h3-font-size);
     }
 }

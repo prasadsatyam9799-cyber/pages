@@ -10,7 +10,7 @@
     margin-top: 20px;
 }
 
-.hero-text h1 {
+.sports-hero h1 {
     font-size: var(--h1-font-size);
     font-weight: 900;
 }
@@ -114,4 +114,33 @@
     font-size: 0.9em;
     color: #666;
     margin-top: auto;
+}
+
+/*-- Media Queries --*/
+@media (max-width: 768px) {
+    .main-story-card h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .sports-hero {
+        padding: 60px 20px;
+    }
+
+    .sports-hero h1 {
+        font-size: 2.25rem;
+    }
+
+    .main-story-card img {
+        height: 300px;
+    }
+
+    .main-story-card .story-content {
+        padding: 20px;
+    }
+
+    .main-story-card h2 {
+        font-size: 1.75em;
+    }
 }
