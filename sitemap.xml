@@ -6,57 +6,72 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>https://weatheringonline.com/</loc>
+  <loc>https://www.weathering.online/</loc>
   <lastmod>2024-07-26T00:00:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://weatheringonline.com/index.html</loc>
+  <loc>https://www.weathering.online/about.html</loc>
   <lastmod>2024-07-26T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://weatheringonline.com/about.html</loc>
+  <loc>https://www.weathering.online/contact.html</loc>
   <lastmod>2024-07-26T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://weatheringonline.com/contact.html</loc>
+  <loc>https://www.weathering.online/weather-patterns.html</loc>
   <lastmod>2024-07-26T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://weatheringonline.com/weather-patterns.html</loc>
+  <loc>https://www.weathering.online/climate-change.html</loc>
   <lastmod>2024-07-26T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://weatheringonline.com/climate-change.html</loc>
+  <loc>https://www.weathering.online/extreme-weather.html</loc>
   <lastmod>2024-07-26T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://weatheringonline.com/extreme-weather.html</loc>
+  <loc>https://www.weathering.online/image-analyzer.html</loc>
   <lastmod>2024-07-26T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://weatheringonline.com/image-analyzer.html</loc>
+  <loc>https://www.weathering.online/privacy.html</loc>
   <lastmod>2024-07-26T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://weatheringonline.com/privacy.html</loc>
+  <loc>https://www.weathering.online/terms.html</loc>
   <lastmod>2024-07-26T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://weatheringonline.com/terms.html</loc>
+  <loc>https://www.weathering.online/search-results.html</loc>
   <lastmod>2024-07-26T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://weatheringonline.com/search-results.html</loc>
+  <loc>https://www.weathering.online/sports.html</loc>
+  <lastmod>2024-07-26T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.weathering.online/health.html</loc>
+  <lastmod>2024-07-26T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.weathering.online/diwali.html</loc>
+  <lastmod>2024-07-26T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.weathering.online/diwali_hi.html</loc>
   <lastmod>2024-07-26T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>

@@ -20,10 +20,15 @@ imageUpload.addEventListener('change', (event) => {
 analyzeBtn.addEventListener('click', () => {
     if (selectedFile) {
         analysisResult.textContent = 'Analyzing...';
-        // Simulate AI analysis
-        setTimeout(() => {
-            analysisResult.textContent = 'This is a placeholder for the AI analysis result. This feature is coming soon!';
-        }, 2000);
+        Tesseract.recognize(
+            selectedFile,
+            'eng',
+            {
+                logger: m => console.log(m)
+            }
+        ).then(({ data: { text } }) => {
+            analysisResult.textContent = text;
+        });
     } else {
         analysisResult.textContent = 'Please choose an image first.';
     }
